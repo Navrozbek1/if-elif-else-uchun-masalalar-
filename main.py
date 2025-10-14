@@ -94,3 +94,28 @@
 #     print("1-soat ichida")
 # else:
 #     print("3-soat ichida")
+
+""" 7. 🚕 Taksi narxi (dam olish kuni) """
+
+# kun = input("Kun nomini kiriting (masalan: Dushanba, Seshanba...): ").lower()
+# masofa = float(input("Masofani kiriting (km): "))
+#
+# ish_kuni = ['dushanba', 'seshanba', 'chorshanba', 'payshanba', 'juma']
+# dam_kuni = ['shanba', 'yakshanba']
+#
+# if kun in dam_kuni:
+#     if masofa > 10:
+#         print("Bugun dam olish kuni!")
+#         print(f"Summa: {(3600 * masofa) * 0.9} Sizga masofa 10 kmdan oshganligi sababli 10% chegirma beriladi.")
+#     else:
+#         print("Bugun dam olish kuni!")
+#         print(f"Summa: {3600 * masofa} so'm.")
+# elif kun in ish_kuni:
+#     if masofa > 10:
+#         print("Bugun ish kuni!")
+#         print(f"Summa: {(3000 * masofa) * 0.9} so'm. Sizga masofa 10 kmdan oshganligi sababli 10% chegirma beriladi.")
+#     else:
+#         print("Bugun ish kuni!")
+#         print(f"Summa: {3000 * masofa} so'm.")
+# else:
+#     print("Qiymat xato kiritildi!")
