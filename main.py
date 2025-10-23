@@ -356,7 +356,7 @@
 # else:
 #    print("Avtobus")
 
-# """ 25. 📩 E-pochta tekshiruvi """
+""" 25. 📩 E-pochta tekshiruvi """
 #
 # email = input("Email manzilini kiriting: ")
 #
@@ -366,3 +366,333 @@
 #    print("Qisqa email")
 # else:
 #    print("Noto‘g‘ri email")
+
+"""  26. 🥗 Ovqat kaloriyasi """
+
+# ovqat = input("Ovqat turini kiriting (salat yoki go'sht): ")
+# porsiya = int(input("Porsiya hajmini kiriting (g): "))
+
+# if ovqat == "salat":
+#    asosiy_kkal = (porsiya / 100) * 50
+# else:
+#    asosiy_kkal = (porsiya / 100) * 200
+
+# if porsiya >= 300:
+#    yakuniy_kkal = asosiy_kkal * 1.1
+# else:
+#    yakuniy_kkal = asosiy_kkal
+
+# print(f"Yakuniy kaloriya: {yakuniy_kkal} kkal")
+
+""" 27. 🏦 **Bank krediti foizi """
+
+# summasi = int(input("Kredit summasi (mln so'm): "))
+# muddati = int(input("Kredit muddati (yil): "))
+
+# if summasi < 10 and muddati == 1:
+#    print("12%")
+# elif summasi >= 10 and muddati == 2:
+#    print("10%")
+# else:
+#    print("15%")
+
+""" 28. 🛫Parvoz narxi """
+
+# sinf = input("Sinfni kiriting (biznes yoki ekonom): ")
+# masofa = int(input("Masofani kiriting (km): "))
+
+# if sinf == "biznes" and masofa < 1000:
+#    asosiy = 1_000_000
+# elif sinf == "ekonom" and masofa < 1000:
+#    asosiy = 500_000
+# elif sinf == "biznes":
+#    asosiy = 1_000_000
+
+# if masofa >= 1000:
+#   yakuniy = asosiy * 1.2
+# else:
+#   yakuniy = asosiy
+
+# print(f"Yakuniy narx: {yakuniy} so'm")
+
+""" 29. 🧴 Kosmetika muddati """
+
+# maxsut_turi = input("Mahsulot turini kiriting (lo'shon yoki krem): ").lower()
+# ochilgan_oylar = int(input("Ochilganidan o'tgan oylar sonini kiriting: "))
+
+# if maxsut_turi == "lo'shon" and ochilgan_oylar >= 6:
+#     print("Ishlatish mumkin emas")
+# elif maxsut_turi == "krem" and ochilgan_oylar >= 12:
+#     print("Ishlatish mumkin emas")
+# else:
+#     print("Xavfsiz ishlatishingiz mumkin")
+
+
+""" 30. 🧵 Kiyim tikish vaqti """
+
+# kiyim_turi = input("Kiyim turini kiriting (bolalar yoki kattalar): ").lower()
+
+# if kiyim_turi == "bolalar":
+#     print("2 kun")
+# else:
+#     olcham = input("O'lchamni kiriting (S, M, L, XL): ").upper()
+#     if olcham == "S" or olcham == "M":
+#         print("4 kun")
+#     else:
+#         print("6 kun")
+
+""" 31. 🧁 Tort narxi """
+
+# qavatlar = int(input("Qavatlar sonini kiriting (kamida 1): "))
+# meva = input("Meva qo'shasizmi? (ha/yo'q): ").lower()
+# shokolad = input("Shokolad qo'shasizmi? (ha/yo'q): ").lower()
+
+# asosiy_narx = 100_000 + (qavatlar - 1) * 50_000
+# if meva == "ha":
+#     asosiy_narx += 20_000
+# if shokolad == "ha":
+#     asosiy_narx += 30_000
+# print(f"Yakuniy narx: {asosiy_narx} so'm")
+
+""" 32. 🧼 Kir yuvish rejimi """
+
+# maton_turi = input("Maton turini kiriting (paxta/sintetik): ").lower()
+# ifloslik = input("Ifloslik darajasini kiriting (yengil/og'ir): ").lower()
+
+# if maton_turi == "paxta" and ifloslik == "yengil":
+#     print("Rejim 1")
+# elif maton_turi == "sintetik" and ifloslik == "og'ir":
+#     print("Rejim 3")
+# else:
+#     print("Rejim 2")
+
+
+"""  33. 📚 Kitob janrini aniqlash """
+
+# kitob_nomi = input("Kitob nomini kiriting: ").lower()
+
+# if "sir" in kitob_nomi or "jinoyat" in kitob_nomi:
+#     print("Detektiv")
+# elif "sevgi" in kitob_nomi or "romantika" in kitob_nomi:
+#     print("Romantik")
+# elif "kosmos" in kitob_nomi or "kelajak" in kitob_nomi:
+#     print("Fantastik")
+# else:
+#     print("Boshqa")
+
+"""  34. 🎭 Konsert chiptasi narxi """
+
+# chipta_turi = input("Chipta turini kiriting (VIP yoki oddiy): ").lower()
+# yosh = int(input("Yoshingizni kiriting: "))
+
+# if chipta_turi == "vip" and yosh > 60:
+#     print("50 000 so'm")
+# elif chipta_turi == "oddiy" and yosh < 18:
+#     print("20 000 so'm")
+# else:
+#     print("30 000 so'm")
+
+""" 35. 🏪 Do'kon ish vaqti tekshiruvi. """
+
+# kun = input("Kun nomini kiriting (masalan: Dushanba, Seshanba...): ").lower()
+# soat = int(input("Hozirgi soatni kiriting (0–23): "))
+# ish_kuni = ['dushanba', 'seshanba', 'chorshanba', 'payshanba', 'juma']
+# dam_kuni = ['shanba', 'yakshanba']
+
+# if kun in ish_kuni and 9 <= soat <= 18:
+#     print("Ochiq")
+# elif kun in dam_kuni and 10 <= soat <= 16:
+#     print("Ochiq")
+# else:
+#     print("Yopiq")
+
+""" 36. 🌱 O'simlik parvarishi tavsiyasi """
+
+# osimlik_turi = input("O'simlik turini kiriting (gul yoki daraxt): ").lower()
+# fasl = input("Faslni kiriting (bahor, yoz, kuz, qish): ").lower()
+
+# if osimlik_turi == "gul" and fasl == "bahor":
+#     print("Haftada 3 marta sug'oring")
+# elif osimlik_turi == "daraxt" and fasl == "yoz":
+#     print("Har kuni sug'oring")
+# elif osimlik_turi == "gul" and fasl == "qish":
+#     print("Haftada 1 marta sug'oring")
+# else:
+#     print("Haftada 2 marta sug'oring")
+
+""" 37. 🎭 Teatr tomoshasi uchun joy tavsiyasi """
+
+# budjet = int(input("Budjetni kiriting (so'm): "))
+# vip_kerak = input("VIP kerakmi? (ha/yo'q): ").lower()
+# yaxshi_korish = input("Yaxshi ko'rish kerakmi? (ha/yo'q): ").lower()
+
+# if budjet > 100_000 and vip_kerak == "ha":
+#     print("Birinchi qator VIP")
+# elif budjet > 100_000 and vip_kerak == "yo'q":
+#     print("Birinchi qator oddiy")
+# elif budjet <= 100_000 and yaxshi_korish == "ha":
+#     print("O'rta qatorlar")
+# else:
+#     print("Orqa qatorlar")
+
+""" 38. 📱 Telefon xotirasi tekshiruvi. """
+
+# xotira_foizi = int(input("Xotira bandligi foizini kiriting: "))
+
+# if xotira_foizi >= 95:
+#     print("Xotira to'la! Tozalash kerak")
+# elif xotira_foizi >= 80:
+#     print("Xotira kam qoldi")
+# elif xotira_foizi >= 50:
+#     print("Xotira yetarli")
+# else:
+#     print("Xotira bo'sh")
+
+"""" 39. 🎯 O'yin ballini baholash"""
+
+# umumiy_ball = int(input("Umumiy ballni kiriting: "))
+
+# if umumiy_ball >= 90:
+#     print("Ustoz")
+# elif umumiy_ball >= 70:
+#     print("Malakali")
+# elif umumiy_ball >= 50:
+#     print("O'rta")
+# else:
+#     print("Boshlang'ich")
+
+""" 40. 🎓 Talaba reytingi """
+
+# ball = int(input("Talabaning umumiy ballini kiriting (0-100): "))
+
+# if 90 <= ball <= 100:
+#     print("5 baxo")
+# elif 71 <= ball <= 89:
+#     print("4 baxo")
+# elif 60 <= ball <= 70:
+#     print("3 baxo")
+# else:
+#     print("Ball yetarli emas!")
+
+"""  41. 🚌 Avtobus chipta narxi. """
+
+# yosh = int(input("Yoshingizni kiriting: "))
+# talaba = input("Talaba misiz? (ha/yo'q): ").lower()
+
+# if yosh < 7:
+#     print("Bepul")
+# elif talaba == "ha":
+#     print("5000 so'm")
+# elif yosh >= 60:
+#     print("Chegirma: 3000 so'm")
+# else:
+#     print("7000 so'm")
+
+"""  42. 🗓️ Yil faslini aniqlash """
+
+# oy = int(input("Oy raqamini kiriting (1-12): "))
+
+# if oy in [12, 1, 2]:
+#     print("Qish")
+# elif oy in [3, 4, 5]:
+#     print("Bahor")
+# elif oy in [6, 7, 8]:
+#     print("Yoz")
+# else:
+#     print("Kuz")
+
+"""  43. 📱 Telefon narxini hisoblash """
+
+# model = input("Telefon modelini kiriting (iPhone yoki Samsung): ")
+# holat = input("Telefon holatini kiriting (yangi yoki ishlatilgan): ")
+
+# if model == "iPhone" and holat == "yangi":
+#     print("Narxi: 1200$")
+# elif model == "iPhone" and holat == "ishlatilgan":
+#     print("Narxi: 800$")
+# elif model == "Samsung" and holat == "yangi":
+#     print("Narxi: 900$")
+# elif model == "Samsung" and holat == "ishlatilgan":
+#     print("Narxi: 600$")
+# else:
+#     print("Noma'lum model yoki holat.")
+
+"""  44. 🏫 Maktabga qabul """
+
+# yosh = int(input("Yoshingizni kriting: "))
+# test = int(input("Test ballini kiriting: "))
+
+# if yosh >= 6 and test >= 70:
+#     print("Qabul qilindi")
+# else:
+#     print("Qabul qilinmadi")
+
+""" 45. 🌐 Internet tezligi tahlili """
+
+# tezlik = int(input("Internet tezligini kiriting (Mbps): "))
+
+# if tezlik < 5:
+#     print("Juda sekin")
+# elif 5 <= tezlik < 20:
+#     print("O'rtacha")
+# elif 20 <= tezlik <= 100:
+#     print("Tez")
+# else:
+#     print("Juda tez")
+
+""" 46. 🐶 Uy hayvoni tavsiyasi """
+
+# vaqt = input("Bo'sh vaqtingizni kiriting (kam/ko'p/o'rtacha): ").lower()
+# joy = input("Uy joyingizni kiriting (kam/ko'p): ").lower()
+# sabr = input("Sabr-toqatingiz bormi? (bor/yo'q): ").lower()
+
+# if vaqt == "kam" and joy == "kam":
+#     print("Baliq")
+# elif vaqt == "ko'p" and sabr == "bor":
+#     print("It")
+# else:
+#     print("Mushuk")
+
+""" 47. 👔 Ishga qabul sharti """
+
+# yosh = int(input("Yoshingizni kiriting: "))
+# tajriba = int(input("Tajriba muddatini kiriting (yil): "))
+# ingliz = input("Ingliz tili darajasini kiriting (boshlang'ich, o'rta, yaxshi): ").lower()
+
+# if yosh >= 22 and tajriba >= 2 and (ingliz == "o'rta" or ingliz == "yaxshi"):
+#     print("Qabul qilindi")
+# else:
+#     print("Qabul qilinmadi")
+
+""" 48. 📆 Kabisa yili tekshiruvi """
+
+# yil = int(input("Yilni kiriting: "))
+
+# if (yil % 4 == 0 and yil % 100 != 0) or (yil % 400 == 0):
+#     print("Kabisa yil")
+# else:
+#     print("Kabisa yil emas")
+
+""" 49. 💸 Soliq hisoblagich """
+
+# daromad = float(input("Oylik daromadingizni kiriting (mln so'm): "))
+
+# if daromad <= 1:
+#     print("0%")
+# elif daromad <= 3:
+#     print("10%")
+# else:
+#     print("20%")
+
+""" 50. 🏪 Chegirma tizimi """
+
+# yosh = int(input("Yoshingizni kiriting: "))
+# mahsulot = input("Mahsulot turini kiriting (Oziq-ovqat, Kiyim, Texnika): ")
+# if mahsulot.lower() == "oziq-ovqat":
+#     print("Chegirma yo'q")
+# elif yosh < 12:
+#     print("20% chegirma")
+# elif yosh > 60:
+#     print("15% chegirma")
+# else:
+#     print("Chegirma mavjud emas")
