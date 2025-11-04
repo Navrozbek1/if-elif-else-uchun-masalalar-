@@ -438,18 +438,78 @@
 # if davomiylik < 1:
 #     print("Xato: Davomiylik 1 soatdan kam bo'lmasligi kerak.")
 # else:
-#     # Soddalashtirilgan if/elif/else tuzilmasi
-#     if kurs_turi == "online" and talaba_holati == "talaba" and davomiylik > 20:
-#         tolov = davomiylik * 5
-#     elif kurs_turi == "online":
-#         tolov = davomiylik * 7
-#     elif kurs_turi == "offline" and davomiylik > 30:
-#         tolov = davomiylik * 10
+#     if kurs_turi == "online":
+#         if talaba_holati == "talaba" and davomiylik > 20:
+#             tolov = davomiylik * 5
+#         else:
+#             tolov = davomiylik * 7
 #     elif kurs_turi == "offline":
-#         tolov = davomiylik * 12
+#         if davomiylik > 30:
+#             tolov = davomiylik * 10
+#         else:
+#             tolov = davomiylik * 12
 #     else:
 #         print("Xato: Kurs turi noto'g'ri.")
 #         tolov = None
 
 #     if tolov is not None:
 #         print(f"Kurs to'lovi: ${tolov}")
+
+""" Masala 24: Ekologik to'lov """
+
+# yonilgi_turi = input("Yonilg'i turini kiriting (benzin/dizel/elektr): ").lower()
+# yillik_masofa = float(input("Yillik masofani kiriting (km): "))
+# emissiya_darajasi = input("Emissiya darajasini kiriting (past/o'rtacha/yuqori): ").strip().lower()
+
+# if yillik_masofa < 0:
+#     print("Xato: Masofa manfiy bo'lmasligi kerak.")
+# else:
+#     if yonilgi_turi == "elektr":
+#         tolov = 0
+#     elif yonilgi_turi == "benzin":
+#         if emissiya_darajasi == "yuqori" and yillik_masofa > 10000:
+#             tolov = yillik_masofa * 0.05
+#         else:
+#             tolov = yillik_masofa * 0.03
+#     elif yonilgi_turi == "dizel":
+#         if emissiya_darajasi == "o'rtacha" or emissiya_darajasi == "yuqori":
+#             tolov = yillik_masofa * 0.07
+#         else:
+#             tolov = yillik_masofa * 0.04
+#     else:
+#         print("Xato: Yonilg'i turi noto'g'ri.")
+#         tolov = None
+
+#     if tolov is not None:
+#         print(f"Ekologik to'lov: ${tolov}")
+
+""" Masala 25: Fitness klubi a'zoligi """
+
+# yosh = int(input("Yoshingizni kiriting: "))
+# mashgulot = input("Mashg'ulot turini kiriting (yoga/fitness/boks): ").strip().lower()
+# muddat = int(input("A'zolik muddatini kiriting (oy): "))
+
+# if yosh < 10 or muddat < 1:
+#     print("Xato: Yosh kamida 10, muddat 1 oydan kam emas.")
+# else:
+#     if yosh < 16:
+#         print("A'zolik taqiqlanadi")
+#     else:
+#         if mashgulot == "yoga":
+#             if muddat > 6:
+#                 tolov = muddat * 30
+#             else:
+#                 tolov = muddat * 40
+#         elif mashgulot == "fitness":
+#             if yosh > 30:
+#                 tolov = muddat * 50
+#             else:
+#                 tolov = muddat * 45
+#         elif mashgulot == "boks":
+#             tolov = muddat * 60
+#         else:
+#             print("Xato: Mashg'ulot turi noto'g'ri.")
+#             tolov = None
+
+#         if tolov is not None:
+#             print(f"A'zolik to'lovi: ${tolov}")
